@@ -1,7 +1,6 @@
 console.log("let's go girls...")
 
 // Create an Twitter object to connect to Twitter API
-// npm install twit
 var Twit = require('twit');
 
 // Pulling all my twitter account info from another file
@@ -31,11 +30,9 @@ function tweetEvent(tweet) {
     let regex = /(impress)/ig;
     var str = text;
     
-    const impressed = (element) => element === "impress";
+    let impressive = str.match(regex) || [];
 
-    let impressive = str.match(regex);
-
-    var isItImpressive = impressive.some(impressed);
+    var isItImpressive = impressive.length>0;
   
       console.log(isItImpressive)
   //from itsAydrian in twitch chat on 1/28 😘    
@@ -57,6 +54,8 @@ function tweetEvent(tweet) {
       } else {
         console.log('Tweeted: ' + reply.text);
       }
-    }
+    }    
+  } else {
+    console.log("We can't go, girls");
   }
 }
