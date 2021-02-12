@@ -16,6 +16,7 @@ var stream = T.stream('statuses/filter', { track: '@bot_shania' });
 // See: https://dev.twitter.com/streaming/userstreams
 stream.on('tweet', tweetEvent);
 
+//follow Pj @metzinaround
 
 //array to add random emojis to the beginning of the tweet
 const thatDontImpressMeMuch = ["🎶🎵🙄🚀🤓", "🎶🎵🙄🏎", "🎶🎵🙄👨‍🎬🍿"];
