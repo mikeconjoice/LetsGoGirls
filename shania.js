@@ -1,6 +1,7 @@
-require("dotenv").config();
-
 console.log("let's go girls...");
+//require("dotenv").config();
+
+
 
 // Create an Twitter object to connect to Twitter API
 var Twit = require('twit');
