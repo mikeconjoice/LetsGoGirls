@@ -9,7 +9,7 @@ var config = require('./config.js');
 var T = new Twit(config);
 
 // Setting up a user stream
-// "this don't impress me much" - Daniel 2021
+// "this don't impress me much" - Daniel 2021 
 var stream = T.stream('statuses/filter', { track: '@bot_shania' });
 
 // Now looking for tweet events

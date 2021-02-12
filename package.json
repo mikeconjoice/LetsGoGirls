@@ -4,7 +4,8 @@
   "description": "updating shania",
   "main": "shania.js",
   "scripts": {
-    "test": "shania.js"
+    "test": "shania.js",
+    "start": "node shania.js"
   },
   "author": "",
   "license": "ISC",
