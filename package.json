@@ -5,7 +5,7 @@
   "main": "shania.js",
   "scripts": {
     "test": "shania.js",
-    "start": "node shania.js"
+    "start": "node ./shania.js"
   },
   "author": "",
   "license": "ISC",
