@@ -1,5 +1,8 @@
 console.log("let's go girls...");
-//require("dotenv").config();
+if (process.env.NODE_ENV === "develop") {
+  require("dotenv").config();
+}
+
 
 
 
