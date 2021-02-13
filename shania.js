@@ -7,8 +7,7 @@ if (process.env.NODE_ENV === "develop") {
 // using Node Schedule from https://github.com/node-schedule/node-schedule suggested by Brendan O'leary https://twitter.com/olearycrew
 const schedule = require("node-schedule");
 const rule = new schedule.RecurrenceRule();
-rule.hour = 17;
-rule.minute = 52;
+rule.hour = 12;
 rule.tz = "Etc/GMT+5";
 
 
