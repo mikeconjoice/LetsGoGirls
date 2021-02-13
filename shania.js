@@ -1,7 +1,19 @@
 console.log("let's go girls...");
+
 if (process.env.NODE_ENV === "develop") {
   require("dotenv").config();
-}
+};
+
+// using Node Schedule from https://github.com/node-schedule/node-schedule suggested by Brendan O'leary https://twitter.com/olearycrew
+const schedule = require("node-schedule");
+const rule = new schedule.RecurrenceRule();
+rule.hour = 17;
+rule.minute = 52;
+rule.tz = "Etc/GMT+5";
+
+
+
+
 
 
 
@@ -9,7 +21,7 @@ if (process.env.NODE_ENV === "develop") {
 // Create an Twitter object to connect to Twitter API
 var Twit = require('twit');
 
-// Pulling all my twitter account info from another file
+// Pulling keys from another file
 var config = require('./config.js');
 // Making a Twit object for connection to the API
 var T = new Twit(config);
@@ -22,7 +34,7 @@ var stream = T.stream('statuses/filter', { track: '@bot_shania' });
 // See: https://dev.twitter.com/streaming/userstreams
 stream.on('tweet', tweetEvent);
 
-//follow Pj @metzinaround
+
 
 //array to add random emojis to the beginning of the tweet
 const thatDontImpressMeMuch = ["🎶🎵🙄🚀🤓", "🎶🎵🙄🏎", "🎶🎵🙄👨‍🎬🍿"];
@@ -66,3 +78,18 @@ function tweetEvent(tweet) {
     console.log("We can't go, girls");
   }
 }
+
+const job1 = schedule.scheduleJob(rule, function()
+{
+  console.log("bah baaaaaaaah budah duh dah dah");
+  T.post('statuses/update', {status: "...let's go, girls."});
+}); 
+
+function letsGoGirls() 
+{
+  console.log("We went Girls")
+};
+
+job1.on("tweetIt", letsGoGirls)
+
+
