@@ -1,12 +1,12 @@
 {
   "name": "shaniaupdate",
   "version": "1.0.0",
-  "description": "updating shania",
-  "main": "shania.js",
+  "description": "updating ariana",
+  "main": "ariana.js",
   "scripts": {
-    "test": "shania.js",
-    "start": "node ./shania.js",
-    "develop": "NODE_ENV=develop node shania.js"
+    "test": "ariana.js",
+    "start": "node ./ariana.js",
+    "develop": "NODE_ENV=develop node ariana.js"
   },
   "author": "",
   "license": "ISC",
