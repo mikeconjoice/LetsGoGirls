@@ -11,12 +11,6 @@ rule.hour = 12;
 rule.tz = "Etc/GMT+5";
 
 
-
-
-
-
-
-
 // Create an Twitter object to connect to Twitter API
 var Twit = require('twit');
 
